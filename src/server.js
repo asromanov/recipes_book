@@ -6,6 +6,7 @@ import jsxRender from './utils/jsxRender';
 import regRouter from './routes/regRouter'
 import session from 'express-session';
 import store from 'session-file-store';
+import isAuth from './middlewares/isAuth';
 
 const PORT = 3000;
 const app = express();
@@ -42,7 +43,7 @@ app.use((req, res, next) => {
 
 app.use('/reg', regRouter);
 
-app.get('/', (req, res) => {
+app.get('/', isAuth, (req, res) => {
   const initState = { hello: 'world' };
   res.render('Layout', initState);
 });

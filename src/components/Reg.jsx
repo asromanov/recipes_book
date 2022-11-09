@@ -25,7 +25,7 @@ export default function Reg() {
         <label htmlFor="exampleInputEmail1" className="form-label">Login:</label>
         <input
           type="text"
-          name="name"
+          name="login"
           value={form.name}
           onChange={changeHandler}
           className="form-control"

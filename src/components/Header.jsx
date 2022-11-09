@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Header() {
+export default function Header({ user }) {
   return (
 
     <nav className="navbar navbar-expand-lg bg-light">
@@ -11,10 +11,18 @@ export default function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-link active" aria-current="page" href="#">Избранное</a>
-            <a className="nav-link" href="/reg">Регистрация</a>
-            <a className="nav-link" href="/reg/auth">Авторизация</a>
-            <a className="nav-link" href="">Выход</a>
+              {!user ? (
+                 <>
+                <a className="nav-link active" aria-current="page" href="#">Избранное</a>
+                <a className="nav-link" href="/reg">Регистрация</a>
+                <a className="nav-link" href="/reg/auth">Авторизация</a>
+                </>
+            ) : (
+            <>
+              <a className="nav-link active" aria-current="page" href="#">Избранное</a>
+              <a className="nav-link" href="/reg/logout">Выход</a>
+            </>
+            )}
           </div>
         </div>
       </div>
