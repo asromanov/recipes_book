@@ -12,8 +12,8 @@ export default function Header() {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <a className="nav-link active" aria-current="page" href="#">Избранное</a>
-            <a className="nav-link" href="">Регистрация</a>
-            <a className="nav-link" href="">Авторизация</a>
+            <a className="nav-link" href="/reg">Регистрация</a>
+            <a className="nav-link" href="/reg/auth">Авторизация</a>
             <a className="nav-link" href="">Выход</a>
           </div>
         </div>
