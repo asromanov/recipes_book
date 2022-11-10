@@ -1,0 +1,8 @@
+input {
+    max-width: 400px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
