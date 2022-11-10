@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Header({ user }) {
   return (
-
+    <div className='container'>
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">Книга рецептов</a>
@@ -27,5 +27,6 @@ export default function Header({ user }) {
         </div>
       </div>
     </nav>
+    </div>
   );
 }
