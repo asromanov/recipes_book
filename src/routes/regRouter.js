@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
 
   req.session.user = { id: user.id, email: user.email, login: user.login };
   res.sendStatus(200);
-  console.log(req.body);
+  // console.log(req.body);
 });
 
 router.get('/auth', async (req, res) => {
