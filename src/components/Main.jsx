@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import RecipeTile from './RecipeTile';
 
 function Main({ user }) {
-    console.log(user)
+    // console.log(user)
     const [query, setquery] = useState("");
     const [recipes, setrecipes] = useState([]);
-    // const [healthLabel, sethealthLabels] = useState('vegan')
 
     const Your_id = '6d7424b8';
     const Your_key = '52faabfb169af7bbf2805aca0c29acbc';
@@ -16,34 +15,35 @@ function Main({ user }) {
         const result = await fetch(url);
         const fetchJson = await result.json();
         setrecipes(fetchJson.hits);
-        console.log(fetchJson.hits);
+        setquery("");
+        // console.log(fetchJson.hits);
     };
 
     const onSubmit = (e) => {
         e.preventDefault();
         getRecipeInfo();
     };
-
+    // console.log(recipes)
     return (
         <div className="container">
-                <div className='center'>
+            <div className='center'>
                 <h1 onClick={getRecipeInfo}>Hello, {user.login}!</h1>
                 <form className="app__searchForm" onSubmit={onSubmit}>
                     <input className="app__input" type="text" placeholder="enter ingridient" autoComplete="Off" value={query} onChange={(e) => setquery(e.target.value)} />
                     <input className="app__submit" type="submit" value="Search" />
 
                 </form>
-                </div>
-                <div className='app__recipes'>
-                            {recipes?.map((recipe) => {
-                                return <RecipeTile recipe={recipe} />;
-                            })}
-                    </div>
-                
-                
             </div>
-            );
-  }
+            <div className='app__recipes'>
+                {recipes?.map((recipe) => {
+                    return <RecipeTile recipe={recipe} />;
+                })}
+            </div>
 
-            export default Main;
+
+        </div>
+    );
+}
+
+export default Main;
 
