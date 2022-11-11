@@ -33,10 +33,11 @@ router.get('/auth', async (req, res) => {
 });
 
 router.post('/auth', async (req, res) => {
-  const { email, password } = req.body;
-  if (!email || !password) return res.sendStatus(400);
+  const { login, password } = req.body;
+  if (!login || !password) return res.sendStatus(400);
 
-  const user = await User.findOne({ where: { email } });
+  const user = await User.findOne({ where: { login } });
+  // console.log(user)
 
   if (!user) return res.sendStatus(400);
 
@@ -44,7 +45,7 @@ router.post('/auth', async (req, res) => {
 
   if (!isPassValid) return res.sendStatus(400);
 
-  req.session.user = { id: user.id, email: user.email, name: user.name };
+  req.session.user = { id: user.id, email: user.email, login: user.login };
 
   res.sendStatus(200);
 });

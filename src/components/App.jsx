@@ -1,7 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Auth from './Auth';
+// import Eat from './Eat';
 import Header from './Header';
+import Main from './Main';
+// import Recipe from './Recipe';
 import Reg from './Reg';
 
 function App({ user }) {
@@ -13,8 +16,9 @@ function App({ user }) {
             <Routes>
               <Route path="/reg" element={<Reg />} />
               <Route path="/reg/auth" element={<Auth />} />
-              {/* <Route path="/" element={<Main />} />
-              <Route path="/myrecipe" element={<List/>} />
+              {/* <Route path="/eat" element={<Eat />} /> */}
+              <Route path="/" element={<Main user={user}/>} />
+              {/* <Route path="/myrecipe" element={<List/>} />
               <Route path="/recipe/:id" element={<Card />} /> */}
             </Routes>
           </div>
