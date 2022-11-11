@@ -23,11 +23,11 @@ export default function Auth() {
     <div className='container'>
       <form onSubmit={submitHandler}>
         <div className="mb-3">
-          <label htmlFor="exampleInputEmail1" className="form-label">Email:</label>
+          <label htmlFor="exampleInputEmail1" className="form-label">Login:</label>
           <input
-            type="email"
-            name="email"
-            value={form.email}
+            type="login"
+            name="login"
+            value={form.login}
             onChange={changeHandler}
             className="form-control"
           id="exampleInputEmail11"
