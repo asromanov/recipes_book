@@ -10,7 +10,7 @@ router.post("/", async (req, res) => {
       where: { title },
       defaults: { title, img, url, user_id},
     })
-    console.log(req.body);
+    // console.log(req.body);
     res.redirect('/');
   })
   

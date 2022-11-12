@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export default function Reg() {
   const [form, setForm] = useState({});
   const changeHandler = (e) => setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  console.log(form);
+  // console.log(form);
 
   const submitHandler = async (event) => {
     event.preventDefault();

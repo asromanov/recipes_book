@@ -10,7 +10,7 @@ import isAuth from './middlewares/isAuth';
 import User from '../db/models'
 import authRouter from './routes/authRouter'
 import favRouter from './routes/favRouter'
-// import { Recipe, User } from '../db/models'
+import { Recipe } from '../db/models'
 import user from '../db/models/user';
 import Reg from './components/Reg';
 
@@ -55,6 +55,11 @@ app.use('/fav', favRouter)
 app.get('/', isAuth, async (req, res) => {
   const initState = {};
   res.render('Layout', initState);
+});
+
+app.delete('/api/v1/:id', async (req, res) => {
+  await Recipe.destroy({ where: { id: req.params.id } });
+  res.sendStatus(200)
 });
 
 
