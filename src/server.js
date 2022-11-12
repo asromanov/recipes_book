@@ -8,6 +8,11 @@ import session from 'express-session';
 import store from 'session-file-store';
 import isAuth from './middlewares/isAuth';
 import User from '../db/models'
+import authRouter from './routes/authRouter'
+import favRouter from './routes/favRouter'
+// import { Recipe, User } from '../db/models'
+import user from '../db/models/user';
+import Reg from './components/Reg';
 
 const PORT = 3000;
 const app = express();
@@ -44,12 +49,13 @@ app.use((req, res, next) => {
 });
 
 app.use('/reg', regRouter);
+app.use('/auth', authRouter);
+app.use('/fav', favRouter)
 
 app.get('/', isAuth, async (req, res) => {
-  const initState = { };
+  const initState = {};
   res.render('Layout', initState);
 });
-
 
 
 app.listen(PORT, () => console.log(`App has started on port ${PORT}`));

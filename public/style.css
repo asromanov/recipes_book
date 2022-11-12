@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .container {
-    max-width: 1030px;
-    margin: auto;
-    padding-top: 20px;
+  max-width: 1030px;
+  margin: auto;
+  padding-top: 20px;
 }
 
 body {
-    /* display: flex;
+  /* display: flex;
     justify-content: center; */
-    margin: 0;
-    font-family: 'Roboto',
-        "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: #f1f1f1;
+  margin: 0;
+  font-family: 'Roboto',
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f1f1f1;
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 input {
-    max-width: 400px;
+  max-width: 400px;
 }
 
 /* .center {
@@ -33,97 +33,98 @@ input {
 } */
 
 .recipeTile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .recipeTile__img {
-    height: 220px;
-    width: 220px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
-  
-  .recipeTile__name {
-    max-width: 200px;
-    text-align: center;
-    margin: 12px 0px;
-    text-decoration: none;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.recipeTile__img {
+  height: 220px;
+  width: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.recipeTile__name {
+  max-width: 200px;
+  text-align: center;
+  margin: 12px 0px;
+  text-decoration: none;
+}
 
 .app {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 24px;
-  }
-  
-  .app__searchForm {
-    margin-top: 18px;
-  }
-  
-  .app__input {
-    padding: 6px 16px;
-    min-width: 200px;
-    max-width: 100vw;
-    font-size: 15px;
-  }
-  
-  .app__submit {
-    padding: 6px 16px;
-    font-size: 15px;
-    margin-left: 6px;
-    background-color: #02aff0;
-    border: 2px solid #02aff0;
-    border-radius: 4px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .app__submit:hover {
-    padding: 6px 16px;
-    font-size: 15px;
-    margin-left: 6px;
-    background-color: white;
-    border: 2px solid #02aff0;
-    border-radius: 4px;
-    color: #02aff0;
-    cursor: pointer;
-  }
-  
-  .app__recipes {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    display: grid;
-    grid-template-columns: 250px 250px 250px 250px;
-    align-items: baseline;
-  }
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px;
+}
 
-  .center {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
+.app__searchForm {
+  margin-top: 18px;
+}
 
-  #label {
-    text-decoration: none;
-    color: #0f7afc;
-    border-bottom: 1px solid;
-    border-bottom-color: rgba(15, 122, 252, 0.2);
-  }
-  #label:hover {
-    text-decoration: none;
-    color: #cf0000;
-    border-bottom-color: rgba(208, 64, 0, 0.2);
-    text-decoration: none;
-  }
+.app__input {
+  padding: 6px 16px;
+  min-width: 200px;
+  max-width: 100vw;
+  font-size: 15px;
+}
 
-  /* .recipe button {
+.app__submit {
+  padding: 6px 16px;
+  font-size: 15px;
+  margin-left: 6px;
+  background-color: #02aff0;
+  border: 2px solid #02aff0;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.app__submit:hover {
+  padding: 6px 16px;
+  font-size: 15px;
+  margin-left: 6px;
+  background-color: white;
+  border: 2px solid #02aff0;
+  border-radius: 4px;
+  color: #02aff0;
+  cursor: pointer;
+}
+
+.app__recipes {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  align-items: baseline;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#label {
+  text-decoration: none;
+  color: #0f7afc;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(15, 122, 252, 0.2);
+}
+
+#label:hover {
+  text-decoration: none;
+  color: #cf0000;
+  border-bottom-color: rgba(208, 64, 0, 0.2);
+  text-decoration: none;
+}
+
+/* .recipe button {
     font-size: 2rem;
     text-transform: uppercase;
     color: #fff;
@@ -132,48 +133,75 @@ input {
     border-radius: 0.5rem;
     height: 3rem;
   } */
-  
-  /* .ingredient-list {
+
+/* .ingredient-list {
     margin-top: 1rem;
     background-color: #f0f0f0;
     border-radius: 0.5rem;
     padding: 0.5rem;
   } */
-  
-  .ingredient-list li {
-    margin: 0.5rem 0;
-  }
-  
-  .ingredient-text {
-    font-size: 12px;
-    color: #888;
-  }
-  
-  .ingredient-weight {
-    color: #40b48e;
-    font-size: 13px;
-  }
-  
-  .app__submit1 {
-    padding: 6px 16px;
-    font-size: 15px;
-    margin-left: 6px;
-    margin-bottom: 15px;
-    background-color: #02aff0;
-    border: 2px solid #02aff0;
-    border-radius: 4px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .app__submit1:hover {
-    padding: 6px 16px;
-    font-size: 15px;
-    margin-left: 6px;
-    margin-bottom: 15px;
-    background-color: white;
-    border: 2px solid #02aff0;
-    border-radius: 4px;
-    color: #02aff0;
-    cursor: pointer;
-  }
+
+.ingredient-list li {
+  margin: 0.5rem 0;
+}
+
+.ingredient-text {
+  font-size: 12px;
+  color: #888;
+}
+
+.ingredient-weight {
+  color: #40b48e;
+  font-size: 13px;
+}
+
+.app__submit1 {
+  padding: 6px 16px;
+  font-size: 15px;
+  margin-left: 6px;
+  margin-bottom: 15px;
+  background-color: #40b48e;
+  border: 2px solid #40b48e;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.app__submit1:hover {
+  padding: 6px 16px;
+  font-size: 15px;
+  margin-left: 6px;
+  margin-bottom: 15px;
+  background-color: white;
+  border: 2px solid #40b48e;
+  border-radius: 4px;
+  color: #40b48e;
+  cursor: pointer;
+}
+
+.app__submit2 {
+  padding: 6px 16px;
+  font-size: 15px;
+  margin-left: 6px;
+  margin-bottom: 15px;
+  background-color: #f00281;
+  border: 2px solid #f00281;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.app__submit2:hover {
+  padding: 6px 16px;
+  font-size: 15px;
+  margin-left: 6px;
+  margin-bottom: 15px;
+  background-color: white;
+  border: 2px solid #f00281;
+  border-radius: 4px;
+  color: #f00281;
+  cursor: pointer;
+}
+
+
+

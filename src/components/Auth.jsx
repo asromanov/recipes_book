@@ -8,7 +8,7 @@ export default function Auth() {
 
   const submitHandler = async (event) => {
     event.preventDefault();
-    const response = await fetch('/reg/auth', {
+    const response = await fetch('/auth', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form),

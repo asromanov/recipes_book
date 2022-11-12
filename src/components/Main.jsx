@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import RecipeTile from './RecipeTile';
+import { v4 as uuidv4 } from "uuid";
 
 function Main({ user }) {
     // console.log(user)
@@ -36,7 +37,7 @@ function Main({ user }) {
             </div>
             <div className='app__recipes'>
                 {recipes?.map((recipe) => {
-                    return <RecipeTile recipe={recipe} />;
+                    return <RecipeTile key={uuidv4()} recipe={recipe} user={user}/>;
                 })}
             </div>
 
