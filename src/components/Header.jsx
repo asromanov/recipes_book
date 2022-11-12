@@ -5,7 +5,7 @@ export default function Header({ user }) {
     <div className='container'>
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Recipes book</a>
+        <a className="navbar-brand" href="/">Recipes book</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
@@ -15,11 +15,11 @@ export default function Header({ user }) {
                  <>
                 <a className="nav-link active" aria-current="page" href="#">Favourites</a>
                 <a className="nav-link" href="/reg">Registration</a>
-                <a className="nav-link" href="/reg/auth">Sign in</a>
+                <a className="nav-link" href="/auth">Sign in</a>
                 </>
             ) : (
             <>
-              <a className="nav-link active" aria-current="page" href="#">Favourite</a>
+              <a className="nav-link active" aria-current="page" href="fav">Favourite</a>
               <a className="nav-link" href="/reg/logout">Sign out</a>
             </>
             )}

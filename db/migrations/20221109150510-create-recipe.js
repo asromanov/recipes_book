@@ -10,16 +10,26 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       title: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       description: {
         type: Sequelize.TEXT
       },
+      url: {
+        type: Sequelize.TEXT
+      },
       time: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       img: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
+      },
+      user_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: "Users",
+          key: "id"
+        }
       },
       createdAt: {
         allowNull: false,
